@@ -1,0 +1,32 @@
+/* Global */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Variables */
+:root {
+  --appColor: '#3C72FC';
+  --appDarkBg: '#000000';
+  --appLightBg: '#000000';
+  --appSecondary: '#707070';
+}
+
+/* Theme */
+
+/* Main */
+
+/* Keyframes */
+
+/* Media Queries */
+@media (min-width: 576px) {
+}
+@media (min-width: 768px) {
+}
+@media (min-width: 992px) {
+}
+@media (min-width: 1200px) {
+}
+@media (min-width: 1400px) {
+}

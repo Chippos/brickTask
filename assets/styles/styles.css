@@ -1,19 +1,56 @@
+/* imports */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
 /* Global */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
 }
 
 /* Variables */
 :root {
-  --appColor: '#3C72FC';
-  --appDarkBg: '#000000';
-  --appLightBg: '#000000';
-  --appSecondary: '#707070';
+  --appColor: #3c72fc;
+  --appDarkBg: #000000;
+  --appLightBg: #ffffff;
+  --appSecondary: #707070;
 }
-
+[data-theme='dark'] {
+  --appColor: #3c72fc;
+  --appDarkBg: #ffffff;
+  --appLightBg: #000000;
+  --appSecondary: #707070;
+}
 /* Theme */
+
+/* darkMode */
+.theme-switch-box {
+  position: fixed;
+  bottom: 20px;
+  height: 40px;
+  width: 40px;
+  aspect-ratio: 1;
+  border-radius: 100px;
+  right: 20px;
+  color: var(--appDarkBg);
+  background-color: var(--appLightBg);
+}
+.theme-switch-box input[type='checkbox'] {
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  cursor: pointer;
+  position: absolute;
+}
+.theme-switch-box label {
+  position: relative;
+  margin: 0;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
 /* Main */
 

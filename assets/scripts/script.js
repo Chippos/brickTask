@@ -11,10 +11,10 @@ if (currentTheme) {
 }
 function switchTheme(e) {
   if (e.target.checked) {
-    document.documentElement.setAttribute('data-theme', 'dark');
+    document.documentElement.setAttribute('data-bs-theme', 'dark');
     localStorage.setItem('theme', 'dark');
   } else {
-    document.documentElement.setAttribute('data-theme', 'light');
+    document.documentElement.setAttribute('data-bs-theme', 'light');
     localStorage.setItem('theme', 'light');
   }
 }

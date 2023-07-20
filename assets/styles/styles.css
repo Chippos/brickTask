@@ -1,26 +1,26 @@
 /* imports */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
 /* Global */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
 }
 
 /* Variables */
-:root {
+/* [data-bs-theme="light"] {
   --appColor: #3c72fc;
   --appDarkBg: #000000;
   --appLightBg: #ffffff;
   --appSecondary: #707070;
 }
-[data-theme='dark'] {
+[data-bs-theme="dark"] {
   --appColor: #3c72fc;
   --appDarkBg: #ffffff;
   --appLightBg: #000000;
-  --appSecondary: #707070;
-}
+  --appSecondary: #a1a1a1;
+} */
 /* Theme */
 
 /* darkMode */
@@ -29,13 +29,14 @@
   bottom: 20px;
   height: 40px;
   width: 40px;
+  z-index: 20;
   aspect-ratio: 1;
   border-radius: 100px;
   right: 20px;
-  color: var(--appDarkBg);
-  background-color: var(--appLightBg);
+  color: var(--bs-light);
+  background-color: var(--bs-black);
 }
-.theme-switch-box input[type='checkbox'] {
+.theme-switch-box input[type="checkbox"] {
   height: 100%;
   width: 100%;
   opacity: 0;
@@ -53,13 +54,48 @@
 }
 
 /* Main */
-
+/* header */
+.dropdown-toggle:after {
+  color: var(--bs-primary);
+}
+.verticalSeparator {
+  height: 100px;
+}
+/* bannerSection */
+.headBannerLgText {
+  font-size: 35px;
+  font-weight: 700;
+  line-height: 1.1;
+}
 /* Keyframes */
 
 /* Media Queries */
+@media (min-width: 350px) {
+  .headBannerLgText {
+    font-size: 40px;
+  }
+}
+@media (min-width: 400px) {
+  .headBannerLgText {
+    font-size: 50px;
+  }
+}
 @media (min-width: 576px) {
+  .headBannerLgText {
+    font-size: 65px;
+  }
 }
 @media (min-width: 768px) {
+  .headBannerLgText {
+    font-size: 80px;
+  }
+  .carousel-control-next-icon,
+  .carousel-control-prev-icon {
+    background-size: 60% !important;
+    height: 50px !important;
+    background-color: var(--bs-secondary) !important;
+    width: 50px !important;
+  }
 }
 @media (min-width: 992px) {
 }

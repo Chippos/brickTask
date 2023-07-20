@@ -1,21 +1,237 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-bs-theme="dark">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" href="" />
     <link rel="stylesheet" href="/assets/styles/styles.css" />
     <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
       rel="stylesheet"
-      href="/assets/libraries/bootstrap_5.0.2/bootstrap.min.css" />
+      integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM"
+      crossorigin="anonymous"
+    />
+
     <link
       rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" />
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
+    />
     <title>Document</title>
   </head>
   <body>
-    <header></header>
-    <main></main>
+    <header>
+      <nav
+        class="navbar navbar-expand-xl py-xl-0 border-bottom border-white bg-light-subtle"
+      >
+        <div class="container-fluid">
+          <a class="navbar-brand py-2 mx-xl-3" href="#">Bricklay</a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div
+            class="verticalSeparator mx-2 border-end border-white d-none d-xl-block"
+          ></div>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 px-xl-3 mb-lg-0 text-uppercase">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Home</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  Services
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">Service 1</a></li>
+                  <li><a class="dropdown-item" href="#">Service 2</a></li>
+                  <li><hr class="dropdown-divider" /></li>
+                  <li>
+                    <a class="dropdown-item" href="#">All Services</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Pages</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Case Shop</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Blog</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Content</a>
+              </li>
+            </ul>
+            <ul class="nav mb-2 mb-lg-0">
+              <li class="nav-item fs-4">
+                <a class="nav-link link-body-emphasis" href="#"
+                  ><i class="bi bi-instagram"></i
+                ></a>
+              </li>
+              <li class="nav-item fs-4">
+                <a class="nav-link link-body-emphasis" href="#"
+                  ><i class="bi bi-linkedin"></i
+                ></a>
+              </li>
+              <li class="nav-item fs-4">
+                <a class="nav-link link-body-emphasis" href="#"
+                  ><i class="bi bi-twitter"></i
+                ></a>
+              </li>
+              <li class="nav-item fs-4">
+                <a class="nav-link link-body-emphasis" href="#"
+                  ><i class="bi bi-facebook"></i
+                ></a>
+              </li>
+            </ul>
+            <div
+              class="verticalSeparator mx-2 border-end border-white d-none d-xl-block"
+            ></div>
+            <form class="position-relative" role="search">
+              <input
+                class="form-control me-2 position-absolute d-none"
+                type="search"
+                placeholder="Search"
+                aria-label="Search"
+              />
+              <button class="btn mx-xl-2 fs-4" type="submit">
+                <i class="bi bi-search"></i>
+              </button>
+            </form>
+            <div
+              class="verticalSeparator mx-2 border-end border-white d-none d-xl-block"
+            ></div>
+            <div class="headerContact py-2 px-xl-2">
+              Need help?<br />
+              <a class="nav-link link-body-emphasis" href="tel:+92666888000"
+                >+92 666 888 000</a
+              >
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <section class="bannerSection">
+        <div
+          id="headBanner"
+          class="carousel slide bg-light-subtle"
+          style="height: calc(100vh - 100px)"
+        >
+          <div class="carousel-indicators">
+            <button
+              type="button"
+              data-bs-target="#headBanner"
+              data-bs-slide-to="0"
+              class="active"
+              aria-current="true"
+              aria-label="Slide 1"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#headBanner"
+              data-bs-slide-to="1"
+              aria-label="Slide 2"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#headBanner"
+              data-bs-slide-to="2"
+              aria-label="Slide 3"
+            ></button>
+          </div>
+          <div class="carousel-inner h-100">
+            <div class="carousel-item h-100 active">
+              <!-- <img src="..." class="d-block w-100" alt="..." /> -->
+              <div
+                class="h-100 gap-4 align-items-start carousel-caption text-start d-flex flex-column justify-content-center text-body-emphasis text-uppercase"
+              >
+                <p class="fs-6">Welcome to code shaper</p>
+                <h1 class="headBannerLgText">
+                  Consulting<br />
+                  For Every<br />Business
+                </h1>
+                <button
+                  class="btn btn-primary text-uppercase rounded-0 p-2 p-md-3"
+                >
+                  Discover more
+                </button>
+              </div>
+            </div>
+            <div class="carousel-item h-100">
+              <div
+                class="h-100 gap-4 align-items-start carousel-caption text-start d-flex flex-column justify-content-center text-body-emphasis text-uppercase"
+              >
+                <p class="fs-6">Welcome to code shaper</p>
+                <h1 class="headBannerLgText">
+                  Consulting<br />
+                  For Every<br />Business
+                </h1>
+                <button
+                  class="btn btn-primary text-uppercase rounded-0 p-2 p-md-3"
+                >
+                  Discover more
+                </button>
+              </div>
+            </div>
+            <div class="carousel-item h-100">
+              <div
+                class="h-100 gap-4 align-items-start carousel-caption text-start d-flex flex-column justify-content-center text-body-emphasis text-uppercase"
+              >
+                <p class="fs-6">Welcome to code shaper</p>
+                <h1 class="headBannerLgText">
+                  Consulting<br />
+                  For Every<br />Business
+                </h1>
+                <button
+                  class="btn btn-primary text-uppercase rounded-0 p-2 p-md-3"
+                >
+                  Discover more
+                </button>
+              </div>
+            </div>
+          </div>
+          <button
+            class="carousel-control-prev"
+            type="button"
+            data-bs-target="#headBanner"
+            data-bs-slide="prev"
+          >
+            <span
+              class="carousel-control-prev-icon rounded-5"
+              aria-hidden="true"
+            ></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button
+            class="carousel-control-next"
+            type="button"
+            data-bs-target="#headBanner"
+            data-bs-slide="next"
+          >
+            <span
+              class="carousel-control-next-icon rounded-5"
+              aria-hidden="true"
+            ></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+      </section>
+    </main>
     <footer>
       <div class="theme-switch-box">
         <label for="checkbox" class="theme-switch"
@@ -25,6 +241,10 @@
       </div>
     </footer>
     <script src="/assets/scripts/script.js"></script>
-    <script src="/assets/libraries/bootstrap_5.0.2/bootstrap.bundle.min.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+      crossorigin="anonymous"
+    ></script>
   </body>
 </html>

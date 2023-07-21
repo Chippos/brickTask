@@ -19,3 +19,40 @@ function switchTheme(e) {
   }
 }
 toggleSwitch.addEventListener('change', switchTheme, false);
+
+$(document).ready(function () {
+  $('.slickPartners').slick({
+    speed: 1000,
+    autoplay: true,
+    autoplaySpeed: 2000,
+    pauseOnHover: false,
+    cssEase: 'ease',
+    slidesToShow: 4,
+    slidesToScroll: 1,
+    infinite: true,
+    arrows: true,
+    responsive: [
+      {
+        breakpoint: 1200,
+        settings: {
+          slidesToShow: 3
+        }
+      },
+      {
+        breakpoint: 870,
+        settings: {
+          slidesToShow: 2
+        }
+      },
+      {
+        breakpoint: 575,
+        settings: {
+          slidesToShow: 1,
+          arrows: false,
+        }
+      },
+    ],
+    prevArrow: `<div class="slickPrev"><i class="bi bi-arrow-left"></i></div>`,
+    nextArrow: `<div class="slickNext"><i class="bi bi-arrow-right"></i></div>`
+  });
+});

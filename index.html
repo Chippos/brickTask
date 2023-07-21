@@ -11,7 +11,13 @@
       integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM"
       crossorigin="anonymous"
     />
-
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css"
+      integrity="sha512-yHknP1/AwR+yx26cB1y0cjvQUMvEa2PFzt1c9LlS4pRQ5NOTZFWbhBig+X9G9eYW/8m0/4OXNx8pxJ6z57x0dw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
@@ -21,7 +27,7 @@
   <body>
     <header>
       <nav
-        class="navbar navbar-expand-xl py-xl-0 border-bottom border-white bg-light-subtle"
+        class="navbar navbar-expand-xl py-xl-0 border-bottom border-white headerClr"
       >
         <div class="container-fluid">
           <a class="navbar-brand py-2 mx-xl-3" href="#">Bricklay</a>
@@ -129,7 +135,7 @@
       <section class="bannerSection">
         <div
           id="headBanner"
-          class="carousel slide bg-light-subtle"
+          class="carousel slide headerClr"
           style="height: calc(100vh - 100px)"
         >
           <div class="carousel-indicators">
@@ -158,7 +164,7 @@
             <div class="carousel-item h-100 active">
               <!-- <img src="..." class="d-block w-100" alt="..." /> -->
               <div
-                class="h-100 gap-4 align-items-start carousel-caption text-start d-flex flex-column justify-content-center text-body-emphasis text-uppercase"
+                class="h-100 gap-4 align-items-start carousel-caption text-start d-flex flex-column justify-content-center text-body-emphasis text-uppercase user-select-none"
               >
                 <p class="fs-6">Welcome to code shaper</p>
                 <h1 class="headBannerLgText">
@@ -174,7 +180,7 @@
             </div>
             <div class="carousel-item h-100">
               <div
-                class="h-100 gap-4 align-items-start carousel-caption text-start d-flex flex-column justify-content-center text-body-emphasis text-uppercase"
+                class="h-100 gap-4 align-items-start carousel-caption text-start d-flex flex-column justify-content-center text-body-emphasis text-uppercase user-select-none"
               >
                 <p class="fs-6">Welcome to code shaper</p>
                 <h1 class="headBannerLgText">
@@ -190,7 +196,7 @@
             </div>
             <div class="carousel-item h-100">
               <div
-                class="h-100 gap-4 align-items-start carousel-caption text-start d-flex flex-column justify-content-center text-body-emphasis text-uppercase"
+                class="h-100 gap-4 align-items-start carousel-caption text-start d-flex flex-column justify-content-center text-body-emphasis text-uppercase user-select-none"
               >
                 <p class="fs-6">Welcome to code shaper</p>
                 <h1 class="headBannerLgText">
@@ -231,15 +237,243 @@
           </button>
         </div>
       </section>
+      <section class="section rwESection sectionPaddingY rweClr">
+        <div class="container-xxl">
+          <div class="text-body-emphasis">
+            <h1 class="sectionHeading fs-1 text-center text-uppercase">
+              REAL-WORLD EXPERIENCE
+            </h1>
+            <p class="sectionSubHeading fs-6 text-center text-body m-0">
+              The best business consulting firm you can count on!
+            </p>
+            <div
+              class="rweCards py-5 my-xl-4 row row-cols-1 row-cols-lg-2 row-cols-xl-3 gy-4"
+            >
+              <div class="rweCard">
+                <div class="rweCardClr d-flex align-items-center h-100">
+                  <div class="rewCardTxt w-75 mx-auto">
+                    <h4 class="fs-4 text-uppercase mb-4">
+                      WEALTH<br />
+                      MANAGEMENT
+                    </h4>
+                    <a
+                      href="#"
+                      class="text-uppercase link-secondary text-decoration-none fs-6"
+                      >read more</a
+                    >
+                  </div>
+                </div>
+              </div>
+              <div class="rweCard">
+                <div class="rweCardClr d-flex align-items-center h-100">
+                  <div class="rewCardTxt w-75 mx-auto">
+                    <h4 class="fs-4 text-uppercase mb-4">
+                      WEALTH<br />
+                      MANAGEMENT
+                    </h4>
+                    <a
+                      href="#"
+                      class="text-uppercase link-secondary text-decoration-none fs-6"
+                      >read more</a
+                    >
+                  </div>
+                </div>
+              </div>
+              <div class="rweCard">
+                <div class="rweCardClr d-flex align-items-center h-100">
+                  <div class="rewCardTxt w-75 mx-auto">
+                    <h4 class="fs-4 text-uppercase mb-4">
+                      WEALTH<br />
+                      MANAGEMENT
+                    </h4>
+                    <a
+                      href="#"
+                      class="text-uppercase link-secondary text-decoration-none fs-6"
+                      >read more</a
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="partners">
+            <div class="d-flex align-items-center">
+              <div class="headingLine"></div>
+              <h6 class="fs-6 text-uppercase px-2 m-0">Meet the partners</h6>
+              <div class="headingLine"></div>
+            </div>
+            <div class="slickPartners my-5 px-sm-5">
+              <div class="partner">
+                <img
+                  src="https://cdn.shopify.com/s/files/1/0372/5675/7381/files/Business_insider-01_c756fa0e-1058-41d8-896e-de42efd09d86.svg?v=1677567100"
+                  alt="Business"
+                  width="200"
+                  class="img-fluid mx-auto"
+                />
+              </div>
+              <div class="partner">
+                <img
+                  src="https://cdn.shopify.com/s/files/1/0372/5675/7381/files/Business_insider-01_c756fa0e-1058-41d8-896e-de42efd09d86.svg?v=1677567100"
+                  alt="Business"
+                  width="200"
+                  class="img-fluid mx-auto"
+                />
+              </div>
+              <div class="partner">
+                <img
+                  src="https://cdn.shopify.com/s/files/1/0372/5675/7381/files/Business_insider-01_c756fa0e-1058-41d8-896e-de42efd09d86.svg?v=1677567100"
+                  alt="Business"
+                  width="200"
+                  class="img-fluid mx-auto"
+                />
+              </div>
+              <div class="partner">
+                <img
+                  src="https://cdn.shopify.com/s/files/1/0372/5675/7381/files/Business_insider-01_c756fa0e-1058-41d8-896e-de42efd09d86.svg?v=1677567100"
+                  alt="Business"
+                  width="200"
+                  class="img-fluid mx-auto"
+                />
+              </div>
+              <div class="partner">
+                <img
+                  src="https://cdn.shopify.com/s/files/1/0372/5675/7381/files/Business_insider-01_c756fa0e-1058-41d8-896e-de42efd09d86.svg?v=1677567100"
+                  alt="Business"
+                  width="200"
+                  class="img-fluid mx-auto"
+                />
+              </div>
+              <div class="partner">
+                <img
+                  src="https://cdn.shopify.com/s/files/1/0372/5675/7381/files/Business_insider-01_c756fa0e-1058-41d8-896e-de42efd09d86.svg?v=1677567100"
+                  alt="Business"
+                  width="200"
+                  class="img-fluid mx-auto"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section
+        class="leadingMarket bg-light sectionPaddingY position-relative overflow-hidden"
+      >
+        <div class="container-xxl">
+          <div class="row row-cols-1 row-cols-lg-2">
+            <div class="col d-flex justify-content-center align-items-center">
+              <div class="playBtn"><i class="bi bi-play-fill"></i></div>
+            </div>
+            <div class="col d-lg-flex">
+              <div class="leadingMarketContent">
+                <h1 class="fs-1 text-dark fw-bold text-uppercase">
+                  We’re leading in<br />the market
+                </h1>
+                <p class="fs-6 text-dark my-4">
+                  Lorem ipsum is simply free text dolor sit amet, consectetur
+                  notted adipisicing elit sed do eiusmod tempor incididunt ut
+                  labore et dolore magna aliqua lonm andhn.
+                </p>
+                <p class="fs-5 text-primary my-5">
+                  We have 35+ years of experience. We offer marketing and
+                  consulting services
+                </p>
+                <div class="progresses">
+                  <div
+                    class="progress"
+                    data-bs-theme="light"
+                    role="progressbar"
+                    aria-label="Consulting"
+                    aria-valuenow="88"
+                    aria-valuemin="0"
+                    aria-valuemax="100"
+                  >
+                    <div class="progress-bar rounded-3" style="width: 88%">
+                      88%
+                    </div>
+                  </div>
+                  <p
+                    class="fw-semibold progressTxt mt-1 mb-2 text-dark text-uppercase"
+                  >
+                    Consulting
+                  </p>
+                  <div
+                    class="progress"
+                    data-bs-theme="light"
+                    role="progressbar"
+                    aria-label="Consulting"
+                    aria-valuenow="88"
+                    aria-valuemin="0"
+                    aria-valuemax="100"
+                  >
+                    <div class="progress-bar rounded-3" style="width: 68%">
+                      68%
+                    </div>
+                  </div>
+                  <p
+                    class="fw-semibold progressTxt mt-1 text-dark text-uppercase"
+                  >
+                    Advices
+                  </p>
+                </div>
+                <div
+                  class="leadingMarketContact align-items-center d-flex mt-5"
+                >
+                  <div class="leadingcallIcon">
+                    <img
+                      src="/assets/images/Icon feather-phone-call.png"
+                      class="img-fluid"
+                      width="25"
+                      alt="Tel"
+                    />
+                  </div>
+                  <div class="leadingcontactInfo ms-3 text-dark">
+                    Have any question? Give us a call<br />
+                    <a href="tel:+923157332944">+92 315 733 2944</a>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="leadingMarketAivon d-none d-lg-block text-uppercase user-select-none"
+              >
+                Aivons
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
     <footer>
       <div class="theme-switch-box">
         <label for="checkbox" class="theme-switch"
           ><input type="checkbox" wfd-invisible="true" />
-          <i class="fa fa-moon-o" aria-hidden="true"></i>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M21.752 15.002A9.718 9.718 0 0118 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.597.748-3.752A9.753 9.753 0 003 11.25C3 16.635 7.365 21 12.75 21a9.753 9.753 0 009.002-5.998z"
+            />
+          </svg>
         </label>
       </div>
     </footer>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.js"
+      integrity="sha512-8Z5++K1rB3U+USaLKG6oO8uWWBhdYsM3hmdirnOEWp8h2B1aOikj5zBzlXs8QOrvY9OxEnD2QDkbSKKpfqcIWw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"
+      integrity="sha512-XtmMtDEcNz2j7ekrtHvOVR4iwwaD6o/FUJe6+Zq+HgcCsk3kj4uSQQR8weQ2QVj1o0Pk6PwYLohm206ZzNfubg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
     <script src="/assets/scripts/script.js"></script>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"

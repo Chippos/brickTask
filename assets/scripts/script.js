@@ -56,3 +56,17 @@ $(document).ready(function () {
     nextArrow: `<div class="slickNext"><i class="bi bi-arrow-right"></i></div>`
   });
 });
+
+const faqAccordionButton = document.querySelector('.faqAccordionButton');
+const faqAccordion = document.querySelector('#faqAccordion');
+
+faqAccordionButton.addEventListener('click', () => {
+  if (!faqAccordionButton.classList.contains('collapsed')) {
+    faqAccordion.classList.add('shadowCustom');
+    faqAccordion.style = 'background-color: #ffffff';
+  }
+  else {
+    faqAccordion.classList.remove('shadowCustom');
+    faqAccordion.style = 'background-color: #F2F4F8';
+  }
+});

@@ -1,48 +1,76 @@
 /* imports */
-@import url('https://fonts.googleapis.com/css2?family=Jost:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Jost:wght@100;200;300;400;500;600;700;800;900&display=swap");
 /* Global */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Jost', sans-serif;
+  font-family: "Jost", sans-serif;
 }
 
 /* Variables */
-[data-bs-theme='light'] {
+[data-bs-theme="light"] {
   --appColor: #3c72fc;
   --appDarkBg: #000000;
+  --appDarkBgInverse: #000000;
   --appLightBg: #ffffff;
   --appSecondary: #707070;
   --headerColor: #fcfcfd;
   --rweColor: #cfe2ff;
   --rweCardColor: #ffffff;
   --caseStudyColor: #f2f4f8;
+  --caseStudyCardColor: #0f0d1d42;
+  --missionBgColor: #f8f9fa;
+  --shadowCustom: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
 }
-[data-bs-theme='dark'] {
+[data-bs-theme="dark"] {
   --appColor: #3c72fc;
   --appDarkBg: #ffffff;
+  --appDarkBgInverse: #ffffff;
   --appLightBg: #000000;
   --appSecondary: #a1a1a1;
   --headerColor: #474747;
   --rweColor: #0f0d1d;
   --rweCardColor: #000000;
   --caseStudyColor: #f2f4f8;
+  --caseStudyCardColor: #0f0d1d42;
+  --missionBgColor: #4b4a56;
+  --shadowCustom: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
 }
 .headerClr {
-  background-color: var(--headerColor);
+  background-color: var(--headerColor) !important;
 }
 .rweClr {
-  background-color: var(--rweColor);
+  background-color: var(--rweColor) !important;
 }
 .rweCardClr {
-  background-color: var(--rweCardColor);
+  background-color: var(--rweCardColor) !important;
 }
 .caseStudyClr {
-  background-color: var(--caseStudyColor);
+  background-color: var(--caseStudyColor) !important;
+}
+.caseCardClr {
+  background-color: var(--caseStudyCardColor) !important;
+}
+.missionBgClr {
+  background-color: var(--missionBgColor) !important;
 }
 /* Theme */
-
+.fs-7 {
+  font-size: 14px !important;
+}
+.h-60 {
+  min-height: 60% !important;
+}
+.mw-90 {
+  max-width: 90% !important;
+}
+.accordion-button:focus {
+  outline: none !important;
+}
+.shadowCustom {
+  box-shadow: var(--shadowCustom);
+}
 /* darkMode */
 .theme-switch-box {
   position: fixed;
@@ -56,7 +84,7 @@
   color: var(--bs-light);
   background-color: var(--bs-black);
 }
-.theme-switch-box input[type='checkbox'] {
+.theme-switch-box input[type="checkbox"] {
   height: 100%;
   width: 100%;
   opacity: 0;
@@ -98,7 +126,7 @@ section.section {
   z-index: 1;
 }
 .sectionPaddingY {
-  padding-block: 100px;
+  padding-block: 80px;
 }
 .rewCardTxt {
   z-index: 1;
@@ -110,8 +138,8 @@ section.section {
 }
 .rweCard:after {
   position: absolute;
-  content: '';
-  background-image: url('/assets/images/Icon\ awesome-bitbucket.png');
+  content: "";
+  background-image: url("/assets/images/Icon\ awesome-bitbucket.png");
   width: 100%;
   height: 100%;
   background-position: 80% 80%;
@@ -192,7 +220,7 @@ section.section {
   z-index: 1;
 }
 .leadingMarket:after {
-  content: '';
+  content: "";
   position: absolute;
   right: 0;
   z-index: -1;
@@ -205,7 +233,7 @@ section.section {
   top: -250px;
 }
 .leadingMarket:before {
-  content: '';
+  content: "";
   position: absolute;
   left: 0;
   bottom: -195px;
@@ -239,6 +267,63 @@ section.section {
   min-height: 242px;
   width: 75% !important;
 }
+.caseCard {
+  min-height: 570px;
+  max-width: 370px;
+  cursor: pointer;
+}
+.caseCardContent {
+  width: 100%;
+}
+.caseCardContent,
+.caseCardContentTxt {
+  transition: 0.3s ease-in-out;
+}
+.caseCardInner:hover .caseCardContent {
+  background-color: var(--bs-primary);
+}
+.caseCardInner:hover .caseCardContentTxt {
+  transform: translateY(-20px);
+}
+/* Mission */
+.missionSectionContent {
+  max-width: 722px;
+  color: var(--appDarkBgInverse);
+}
+.missionContentHeading {
+  font-size: 35px;
+  font-weight: 700;
+}
+/* FAQ */
+#faqAccordion {
+  transition: 0.3s ease-in-out;
+  min-height: 70px;
+  background-color: #f2f4f8;
+}
+.accordion-button:focus {
+  background-color: unset !important;
+  outline: none !important;
+  box-shadow: none !important;
+}
+.accordion-button:not(.collapsed) {
+  background-color: unset !important;
+  outline: none !important;
+  border: 0 !important;
+  box-shadow: none !important;
+}
+.faqImage {
+  min-height: 180px;
+  flex: 1;
+  width: 100%;
+}
+.faqList {
+  list-style-image: url(/assets/images/Icon\ feather-check.png);
+  font-size: 18px;
+  line-height: 1.8;
+}
+.faqExperience {
+  height: 150px;
+}
 /* Keyframes */
 
 /* Media Queries */
@@ -255,6 +340,19 @@ section.section {
 @media (min-width: 576px) {
   .headBannerLgText {
     font-size: 65px;
+  }
+  .sectionPaddingY {
+    padding-block: 100px;
+  }
+  .caseCardContent {
+    width: 85%;
+  }
+  .missionContentHeading {
+    font-size: 40px;
+    font-weight: 700;
+  }
+  .faqExperience {
+    width: 150px;
   }
 }
 @media (min-width: 768px) {
@@ -278,6 +376,12 @@ section.section {
     margin-top: -170px;
     position: relative;
     z-index: 1;
+  }
+  .missionContentHeading {
+    font-size: 50px;
+    font-weight: 700;
+    line-height: 70px;
+    letter-spacing: -0.019199999049305916px;
   }
 }
 @media (min-width: 992px) {

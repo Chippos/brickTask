@@ -55,18 +55,48 @@ $(document).ready(function () {
     prevArrow: `<div class="slickPrev"><i class="bi bi-arrow-left"></i></div>`,
     nextArrow: `<div class="slickNext"><i class="bi bi-arrow-right"></i></div>`
   });
+
+  $('#reviewCardsSlider').slick({
+    speed: 1000,
+    autoplay: true,
+    autoplaySpeed: 2000,
+    pauseOnHover: false,
+    cssEase: 'ease',
+    slidesToShow: 2,
+    slidesToScroll: 1,
+    infinite: true,
+    arrows: true,
+    prevArrow: '.reviewArrowLeft',
+    nextArrow: '.reviewArrowRight',
+    responsive: [
+      {
+        breakpoint: 1200,
+        settings: {
+          slidesToShow: 1
+        }
+      },
+      {
+        breakpoint: 575,
+        settings: {
+          slidesToShow: 1,
+          arrows: false,
+        }
+      },
+    ],
+  });
 });
 
-const faqAccordionButton = document.querySelector('.faqAccordionButton');
-const faqAccordion = document.querySelector('#faqAccordion');
+const faqAccordionButtons = document.querySelectorAll('.faqAccordionButton');
+const faqAccordions = document.querySelectorAll('.faqAccordion');
 
-faqAccordionButton.addEventListener('click', () => {
-  if (!faqAccordionButton.classList.contains('collapsed')) {
-    faqAccordion.classList.add('shadowCustom');
-    faqAccordion.style = 'background-color: #ffffff';
-  }
-  else {
-    faqAccordion.classList.remove('shadowCustom');
-    faqAccordion.style = 'background-color: #F2F4F8';
-  }
+faqAccordionButtons.forEach((faqAccordionButton, index) => {
+  faqAccordionButton.addEventListener('click', () => {
+    if (!faqAccordionButton.classList.contains('collapsed')) {
+      faqAccordions[index].classList.add('shadowCustom');
+      faqAccordions[index].style.backgroundColor = '#ffffff';
+    } else {
+      faqAccordions[index].classList.remove('shadowCustom');
+      faqAccordions[index].style.backgroundColor = '#F2F4F8';
+    }
+  });
 });

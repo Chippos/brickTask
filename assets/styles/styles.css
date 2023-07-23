@@ -55,7 +55,13 @@
 .missionBgClr {
   background-color: var(--missionBgColor) !important;
 }
+.reviewClr {
+  background-color: var(--caseStudyColor) !important;
+}
 /* Theme */
+.fs-xxl {
+  font-size: 30px;
+}
 .fs-7 {
   font-size: 14px !important;
 }
@@ -324,6 +330,39 @@ section.section {
 .faqExperience {
   height: 150px;
 }
+.reviewArrowLeft,
+.reviewArrowRight {
+  height: 65px;
+  width: 65px;
+  display: flex;
+  font-size: 28px;
+  transition: 0.2s ease-in-out;
+  color: var(--appLightBg);
+  cursor: pointer;
+  background-color: var(--appDarkBgInverse);
+  align-items: center;
+  justify-content: center;
+}
+.reviewArrowLeft:active,
+.reviewArrowRight:active {
+  background-color: var(--bs-primary);
+  color: var(--bs-light);
+  box-shadow: var(--shadowCustom);
+}
+#reviewCardsSlider{
+  margin: auto -15px;
+}
+.reviewCard {
+  /* min-height: 400px; */
+  /* max-width: 450px; */
+  margin: 20px 15px;
+}
+.reviewCardContentTxt {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  -webkit-line-clamp: 7;
+}
 /* Keyframes */
 
 /* Media Queries */
@@ -338,6 +377,9 @@ section.section {
   }
 }
 @media (min-width: 576px) {
+  .fs-xxl {
+    font-size: 40px;
+  }
   .headBannerLgText {
     font-size: 65px;
   }
@@ -356,6 +398,9 @@ section.section {
   }
 }
 @media (min-width: 768px) {
+  .fs-xxl {
+    font-size: 50px;
+  }
   .headBannerLgText {
     font-size: 80px;
   }

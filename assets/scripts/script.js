@@ -100,3 +100,59 @@ faqAccordionButtons.forEach((faqAccordionButton, index) => {
     }
   });
 });
+
+function updateCounterWithTransition() {
+  const counterElements = document.querySelectorAll('.counterNumber');
+  const interval = 2000;
+  function updateNumber(counterElement, startTime, targetNumber) {
+    const currentTime = performance.now();
+    const progress = Math.min(1, (currentTime - startTime) / interval);
+    const updatedNumber = Math.round(progress * (targetNumber - counterElement.innerText) + parseInt(counterElement.innerText));
+    counterElement.innerText = updatedNumber;
+    if (progress < 1) {
+      requestAnimationFrame((timestamp) => updateNumber(counterElement, startTime, targetNumber));
+    }
+  }
+  function startUpdate(counterElement, newNumber) {
+    const startTime = performance.now();
+    const currentNumber = parseInt(counterElement.innerText);
+    requestAnimationFrame((timestamp) => updateNumber(counterElement, startTime, newNumber));
+  }
+  counterElements.forEach((counterElement) => {
+    setInterval(() => {
+      const randomNumber = Math.floor(Math.random() * 1000);
+      startUpdate(counterElement, randomNumber);
+    }, interval);
+  });
+}
+updateCounterWithTransition();
+
+// Function to handle email in localStorage
+function storeEmail() {
+  const emailInput = document.getElementById('emailInput');
+  const email = emailInput.value;
+
+  if (email.trim() !== '') {
+    localStorage.setItem('userEmail', email);
+    showSavedMessage();
+  }
+}
+
+// Function to show the stored email in the input field
+function showStoredEmail() {
+  const emailInput = document.getElementById('emailInput');
+  const storedEmail = localStorage.getItem('userEmail');
+  if (storedEmail) {
+    emailInput.value = storedEmail;
+  }
+}
+function showSavedMessage() {
+  const savedMessage = document.getElementById('savedMessage');
+  savedMessage.classList.remove('d-none');
+  setTimeout(() => {
+    savedMessage.classList.add('d-none');
+  }, 2000);
+}
+const registerButton = document.getElementById('registerButton');
+registerButton.addEventListener('click', storeEmail);
+showStoredEmail();

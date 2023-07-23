@@ -12,7 +12,7 @@
 [data-bs-theme="light"] {
   --appColor: #3c72fc;
   --appDarkBg: #000000;
-  --appDarkBgInverse: #000000;
+  --appDarkBgInverse: #ffffff;
   --appLightBg: #ffffff;
   --appSecondary: #707070;
   --headerColor: #fcfcfd;
@@ -22,11 +22,13 @@
   --caseStudyCardColor: #0f0d1d42;
   --missionBgColor: #f8f9fa;
   --shadowCustom: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
+  --shadowSmCustom: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075) !important;
+  --counterColor: #cfe2ff;
 }
 [data-bs-theme="dark"] {
   --appColor: #3c72fc;
   --appDarkBg: #ffffff;
-  --appDarkBgInverse: #ffffff;
+  --appDarkBgInverse: #000000;
   --appLightBg: #000000;
   --appSecondary: #a1a1a1;
   --headerColor: #474747;
@@ -36,6 +38,8 @@
   --caseStudyCardColor: #0f0d1d42;
   --missionBgColor: #4b4a56;
   --shadowCustom: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
+  --shadowSmCustom: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075) !important;
+  --counterColor: #07122d;
 }
 .headerClr {
   background-color: var(--headerColor) !important;
@@ -58,6 +62,15 @@
 .reviewClr {
   background-color: var(--caseStudyColor) !important;
 }
+.counterClr {
+  background-color: var(--counterColor) !important;
+}
+.footerClr {
+  background-color: var(--rweColor) !important;
+}
+.textInverse {
+  color: var(--appDarkBg);
+}
 /* Theme */
 .fs-xxl {
   font-size: 30px;
@@ -77,16 +90,19 @@
 .shadowCustom {
   box-shadow: var(--shadowCustom);
 }
+.shadowSmCustom {
+  box-shadow: var(--shadowSmCustom);
+}
 /* darkMode */
 .theme-switch-box {
   position: fixed;
-  bottom: 20px;
-  height: 40px;
-  width: 40px;
+  bottom: 25px;
+  height: 50px;
+  width: 50px;
   z-index: 20;
   aspect-ratio: 1;
   border-radius: 100px;
-  right: 20px;
+  right: 25px;
   color: var(--bs-light);
   background-color: var(--bs-black);
 }
@@ -102,7 +118,7 @@
   margin: 0;
   height: 100%;
   width: 100%;
-  padding: 8px;
+  padding: 10px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -132,6 +148,9 @@ section.section {
   z-index: 1;
 }
 .sectionPaddingY {
+  padding-block: 80px;
+}
+.footerPaddingY {
   padding-block: 80px;
 }
 .rewCardTxt {
@@ -294,7 +313,7 @@ section.section {
 /* Mission */
 .missionSectionContent {
   max-width: 722px;
-  color: var(--appDarkBgInverse);
+  color: var(--appDarkBg);
 }
 .missionContentHeading {
   font-size: 35px;
@@ -330,6 +349,7 @@ section.section {
 .faqExperience {
   height: 150px;
 }
+/* review */
 .reviewArrowLeft,
 .reviewArrowRight {
   height: 65px;
@@ -339,7 +359,7 @@ section.section {
   transition: 0.2s ease-in-out;
   color: var(--appLightBg);
   cursor: pointer;
-  background-color: var(--appDarkBgInverse);
+  background-color: var(--appDarkBg);
   align-items: center;
   justify-content: center;
 }
@@ -349,7 +369,7 @@ section.section {
   color: var(--bs-light);
   box-shadow: var(--shadowCustom);
 }
-#reviewCardsSlider{
+#reviewCardsSlider {
   margin: auto -15px;
 }
 .reviewCard {
@@ -357,11 +377,105 @@ section.section {
   /* max-width: 450px; */
   margin: 20px 15px;
 }
+.reviewCard:hover,
+.partner:hover {
+  cursor: grab;
+}
 .reviewCardContentTxt {
   display: -webkit-box;
   -webkit-box-orient: vertical;
   overflow: hidden;
   -webkit-line-clamp: 7;
+}
+/* counter */
+.counter {
+  /* min-height: 200px; */
+  max-width: 200px;
+  margin-inline: auto;
+}
+.counterIcon {
+  width: 90px;
+  height: 90px;
+  aspect-ratio: 1;
+  background-color: var(--appDarkBgInverse);
+}
+.counterCol {
+  position: relative;
+}
+.counterCol:after {
+  top: 50%;
+  /* border-right: 1px solid var(--appSecondary); */
+  content: unset;
+  width: 1px;
+  position: absolute;
+  right: 0;
+  display: block;
+  height: 90%;
+  background-color: var(--appSecondary);
+  transform: translateY(-50%);
+}
+/* Growth */
+.navGrowthBtn {
+  min-height: 175px;
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: var(--shadowSmCustom) !important;
+  background-color: #f2f4f8 !important;
+  color: var(--bs-dark) !important;
+}
+.navGrowthBtn:hover {
+  background-color: #eeeeee !important;
+  color: var(--bs-dark) !important;
+}
+.navGrowthBtn.active {
+  box-shadow: var(--shadowCustom) !important;
+  background-color: #ffffff !important;
+  color: var(--bs-primary) !important;
+}
+.growthTabsCustom {
+  margin-top: -180px;
+}
+.borderColCustom {
+  border-right: 1px solid #eeeeee;
+}
+.growthListItems {
+  list-style-image: url(/assets/images/\/Line\ 22.png);
+}
+.growthListItems li {
+  transition: 0.2s ease-in-out;
+  cursor: grab;
+}
+.growthListItems li:hover {
+  transform: translateX(10px);
+}
+/* Footer */
+.footerSiteLogo {
+  width: 180px;
+  height: 60px;
+}
+.footerSocialList {
+  list-style-type: none;
+  padding: 0;
+}
+.listStyleNone {
+  list-style-type: none;
+  padding-left: 0;
+}
+.footerMenuList li {
+  transition: 0.2s ease-in-out;
+  cursor: pointer;
+}
+.footerMenuList li:hover {
+  transform: translateX(10px);
+}
+.newsLetterInputField {
+  flex: 1;
+  min-height: 60px;
+  border: 0 !important;
+  outline: none !important;
+  box-shadow: none !important;
 }
 /* Keyframes */
 
@@ -396,6 +510,18 @@ section.section {
   .faqExperience {
     width: 150px;
   }
+  .counterCol:after {
+    content: "";
+  }
+  .counterCol:nth-last-child(1):after {
+    content: unset;
+  }
+  .counterCol:nth-last-child(3):after {
+    content: unset;
+  }
+  .growthColContentStart {
+    max-width: 90%;
+  }
 }
 @media (min-width: 768px) {
   .fs-xxl {
@@ -427,6 +553,12 @@ section.section {
     font-weight: 700;
     line-height: 70px;
     letter-spacing: -0.019199999049305916px;
+  }
+  .counterCol:nth-last-child(1):after {
+    content: unset;
+  }
+  .counterCol:nth-last-child(3):after {
+    content: "";
   }
 }
 @media (min-width: 992px) {

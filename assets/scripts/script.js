@@ -35,25 +35,25 @@ $(document).ready(function () {
       {
         breakpoint: 1200,
         settings: {
-          slidesToShow: 3
-        }
+          slidesToShow: 3,
+        },
       },
       {
         breakpoint: 870,
         settings: {
-          slidesToShow: 2
-        }
+          slidesToShow: 2,
+        },
       },
       {
         breakpoint: 575,
         settings: {
           slidesToShow: 1,
           arrows: false,
-        }
+        },
       },
     ],
     prevArrow: `<div class="slickPrev"><i class="bi bi-arrow-left"></i></div>`,
-    nextArrow: `<div class="slickNext"><i class="bi bi-arrow-right"></i></div>`
+    nextArrow: `<div class="slickNext"><i class="bi bi-arrow-right"></i></div>`,
   });
 
   $('#reviewCardsSlider').slick({
@@ -72,15 +72,15 @@ $(document).ready(function () {
       {
         breakpoint: 1200,
         settings: {
-          slidesToShow: 1
-        }
+          slidesToShow: 1,
+        },
       },
       {
         breakpoint: 575,
         settings: {
           slidesToShow: 1,
           arrows: false,
-        }
+        },
       },
     ],
   });
@@ -107,16 +107,23 @@ function updateCounterWithTransition() {
   function updateNumber(counterElement, startTime, targetNumber) {
     const currentTime = performance.now();
     const progress = Math.min(1, (currentTime - startTime) / interval);
-    const updatedNumber = Math.round(progress * (targetNumber - counterElement.innerText) + parseInt(counterElement.innerText));
+    const updatedNumber = Math.round(
+      progress * (targetNumber - counterElement.innerText) +
+        parseInt(counterElement.innerText)
+    );
     counterElement.innerText = updatedNumber;
     if (progress < 1) {
-      requestAnimationFrame((timestamp) => updateNumber(counterElement, startTime, targetNumber));
+      requestAnimationFrame((timestamp) =>
+        updateNumber(counterElement, startTime, targetNumber)
+      );
     }
   }
   function startUpdate(counterElement, newNumber) {
     const startTime = performance.now();
     const currentNumber = parseInt(counterElement.innerText);
-    requestAnimationFrame((timestamp) => updateNumber(counterElement, startTime, newNumber));
+    requestAnimationFrame((timestamp) =>
+      updateNumber(counterElement, startTime, newNumber)
+    );
   }
   counterElements.forEach((counterElement) => {
     setInterval(() => {
